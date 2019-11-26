@@ -1,6 +1,13 @@
 {
   "name": "blog-api",
   "version": "1.0.0",
+  "description": "Building a RESTful API with nodejs framework keystonejs in 2019",
+  "keywords": ["keystonejs", "nodejs", "rest api", "mongoose", "mongodb"],
+  "author": {
+    "name": "Kenguruka Grevisse",
+    "email": "kengres@yandex.ru",
+    "url": "https://me.kenguruka.ru"
+  },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
