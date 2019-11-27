@@ -8,12 +8,10 @@ const routes = {
 };
 
 exports = module.exports = function (app) {
-  // app.get('/', ((req, res, next) => res.redirect('/keystone')));
   // * API
-  // app.all(apiPrefix +'/*', [keystone.middleware.api, keystone.middleware.cors]);
-  app.get(apiPrefix +'/todos', routes.api.todos.list);
-  // app.get(apiPrefix +'/lines', [keystone.middleware.api, keystone.middleware.cors], routes.api.lines.list);
-  // app.get(apiPrefix +'/lines/:number', [keystone.middleware.api, keystone.middleware.cors], routes.api.lines.get);
-  // app.get(apiPrefix +'/stations', [keystone.middleware.api, keystone.middleware.cors], routes.api.stations.list);
-  // app.get(apiPrefix +'/station', [keystone.middleware.api, keystone.middleware.cors], routes.api.stations.get);
+  app.get(apiPrefix + '/posts', routes.api.posts.list);
+  app.get(apiPrefix + '/posts/:id', routes.api.posts.getOne);
+  app.post(apiPrefix + '/posts', routes.api.posts.create);
+  app.put(apiPrefix + '/posts/:id', routes.api.posts.update);
+  app.delete(apiPrefix + '/posts/:id', routes.api.posts.delete);
 };
